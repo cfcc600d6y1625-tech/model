@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+tensorflow-cpu>=2.10.0
+pillow
+numpy
+python-multipart
+xgboost
+scikit-learn
+joblib
+pandas
+opencv-python-headless

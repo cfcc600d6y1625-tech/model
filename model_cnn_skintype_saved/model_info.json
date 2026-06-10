@@ -1,0 +1,16 @@
+{
+  "model_name": "cnn_skintype_effnetb3_hybrid",
+  "selected_model_source": "/content/drive/MyDrive/SYNAR/pipeline_v3/model_effnetb3_hybrid/best_effnetb3_hybrid.keras",
+  "saved_model_dir": "/content/drive/MyDrive/SYNAR/pipeline_v3/model_cnn_skintype_saved",
+  "keras_model_copy": "/content/drive/MyDrive/SYNAR/pipeline_v3/model_cnn_skintype.keras",
+  "input_image_size": 224,
+  "inputs": {
+    "image_input": "RGB face crop, shape [batch, 224, 224, 3], float32",
+    "color_input": "standardized LAB/HSV/ITA color features"
+  },
+  "output": {
+    "type": "softmax probability",
+    "num_classes": 6
+  },
+  "note": "Model ini adalah EfficientNet-B3 Hybrid CNN dengan input gambar wajah dan fitur warna kulit."
+}

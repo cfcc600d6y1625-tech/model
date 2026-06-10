@@ -1,0 +1,26 @@
+{
+  "class_names": [
+    "type_1",
+    "type_2",
+    "type_3",
+    "type_4",
+    "type_5",
+    "type_6"
+  ],
+  "label_to_class": {
+    "0": "type_1",
+    "1": "type_2",
+    "2": "type_3",
+    "3": "type_4",
+    "4": "type_5",
+    "5": "type_6"
+  },
+  "class_to_label": {
+    "type_1": 0,
+    "type_2": 1,
+    "type_3": 2,
+    "type_4": 3,
+    "type_5": 4,
+    "type_6": 5
+  }
+}
