@@ -1,7 +1,6 @@
 import argparse
 import json
 import re
-import sys
 from pathlib import Path
 
 import cv2
@@ -10,11 +9,8 @@ import tensorflow as tf
 from tensorflow import keras
 from PIL import Image, ImageOps
 
-CURRENT_DIR = Path(__file__).resolve().parent
-sys.path.append(str(CURRENT_DIR))
-
-from custom_loss import get_custom_objects
-from custom_layer import get_custom_layers
+from .custom_loss import get_custom_objects
+from .custom_layer import get_custom_layers
 
 
 CLASS_NAMES = [f"type_{i}" for i in range(1, 7)]
