@@ -15,10 +15,10 @@ from fastapi import FastAPI, File, UploadFile, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 
 # File lokal di folder deployment
-from custom_loss import get_custom_objects
-from custom_layer import get_custom_layers
+from .custom_loss import get_custom_objects
+from .custom_layer import get_custom_layers
 
-from inference_cnn import (
+from .inference_cnn import (
     retinaface_crop_or_fallback,
     create_final_skin_mask,
     extract_color_features,
@@ -26,7 +26,7 @@ from inference_cnn import (
     build_color_input,
     CLASS_NAMES,
     LABEL_TO_CLASS,
-    IMG_SIZE
+    IMG_SIZE,
 )
 
 
