@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
+from pathlib import Path
 import numpy as np
 import pandas as pd
 import joblib
@@ -9,13 +10,28 @@ app = FastAPI(title="SYNAR Regression API")
 # =========================
 # LOAD MODEL
 # =========================
-correction_pipeline = joblib.load("correction_pipeline.pkl")
-best_time_pipeline  = joblib.load("best_time_pipeline.pkl")
+BASE_DIR = Path(__file__).resolve().parent
+MODEL_DIR = BASE_DIR.parent / "model"
+
+correction_pipeline = joblib.load(
+    MODEL_DIR / "correction_pipeline.pkl"
+)
+
+best_time_pipeline = joblib.load(
+    MODEL_DIR / "best_time_pipeline.pkl"
+)
 
 # =========================
 # CONSTANT
 # =========================
-MED_LOWER = {1: 200, 2: 250, 3: 300, 4: 450, 5: 600, 6: 1000}
+MED_LOWER = {
+    1: 200,
+    2: 250,
+    3: 300,
+    4: 450,
+    5: 600,
+    6: 1000
+}
 
 SKIN_TYPE_INFO = {
     1: {"spf_min": 30},
